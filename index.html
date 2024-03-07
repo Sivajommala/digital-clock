@@ -1,0 +1,42 @@
+<html>
+    
+    <title>digital clock</title>
+    <STYLE>
+        .box{
+            border: 2px black solid;
+            background-color: lightcoral;
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            height: 30px;
+            width: 300px;
+            align-items: center;
+            justify-content: center;
+            padding:25px;
+            margin: none;
+            margin-top: 100px;
+        }
+        p{
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    </STYLE>
+<body>
+<center>
+<div class="box">
+<p id="demo"></p>
+</div>
+</center>
+<script>
+const myInterval = setInterval(myTimer, 100);
+
+function myTimer() {
+  const date = new Date();
+  document.getElementById("demo").innerHTML = date.toLocaleTimeString().replace("AM","").replace("PM","");
+
+}
+
+</script>
+
+</body>
+</html>
